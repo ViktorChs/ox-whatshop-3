@@ -26,6 +26,18 @@
       <button class="login-btn" id="login-btn" data-i18n="login_btn">Entrar</button>
       <p class="login-error" id="login-error" data-i18n="login_error">Credenciales incorrectas o acceso denegado</p>
       <p class="login-hint" id="login-hint"></p>
+      <button type="button" class="login-reg-toggle" id="login-reg-toggle" data-i18n="login_reg_toggle">¿No tienes acceso? Activa tu tienda con un código</button>
+
+      <div class="login-reg" id="register-view" hidden>
+        <p class="sub" id="reg-sub" data-i18n="reg_sub">Usa el código que generaste desde tu panel central (Tiendas &gt; Código de alta).</p>
+        <input id="reg-code" type="text" autocomplete="off" placeholder="Código XXXX-XXXX" />
+        <input id="reg-user" type="text" autocomplete="username" placeholder="Usuario" />
+        <input id="reg-pass" type="password" autocomplete="new-password" placeholder="Contraseña" />
+        <input id="reg-pass2" type="password" autocomplete="new-password" placeholder="Confirmar contraseña" />
+        <button class="login-btn" id="reg-btn" data-i18n="reg_btn">Crear cuenta</button>
+        <p class="login-error" id="reg-error"></p>
+        <button type="button" class="login-reg-toggle" id="reg-back" data-i18n="reg_back">Ya tengo acceso</button>
+      </div>
     </div>
   </div>
 
@@ -835,7 +847,8 @@
     // ===== i18n =====
     var I18N = {
       es: {
-        login_sub: 'Panel de administración', login_btn: 'Entrar', login_user_ph: 'Usuario', login_pass_ph: 'Contraseña', login_error: 'Credenciales incorrectas o acceso denegado', login_hint: 'Tu acceso se gestiona en el panel central. Si la tienda no está activa, el acceso está bloqueado.',
+        login_sub: 'Panel de administración', login_btn: 'Entrar', login_user_ph: 'Usuario', login_pass_ph: 'Contraseña', login_error: 'Credenciales incorrectas o acceso denegado', login_hint: 'Tu acceso se gestiona en el panel central. Si la tienda no está activa, el acceso está bloqueado.', login_reg_toggle: '¿No tienes acceso? Activa tu tienda con un código',
+        reg_sub: 'Usa el código que generaste desde tu panel central (Tiendas > Código de alta).', reg_code_ph: 'Código XXXX-XXXX', reg_user_ph: 'Usuario', reg_pass_ph: 'Contraseña', reg_pass2_ph: 'Confirmar contraseña', reg_btn: 'Crear cuenta', reg_back: 'Ya tengo acceso', reg_min: 'La contraseña debe tener al menos 4 caracteres', reg_match: 'Las contraseñas no coinciden', reg_r_invalid: 'Código no válido para esta tienda', reg_r_disabled: 'El código está deshabilitado', reg_r_expired: 'El código ha expirado', reg_r_used: 'El código ya fue usado', reg_r_userpass: 'Usuario o contraseña no válidos', reg_error: 'No se pudo activar la cuenta',
         ws_plan: 'WhatShop', ws_new: '+ Nueva tienda',
         nav_apariencia: 'Apariencia', nav_ap_colores: 'Colores', nav_ap_tipografia: 'Tipografía', nav_ap_marca: 'Marca', nav_ap_disenno: 'Diseño', nav_qs: 'Config. rápidas', wz_open: 'Configuración inicial', qs_title: 'Configuraciones rápidas', qs_sub: 'Paletas de color en un clic. Se aplican al tab Colores.', qs_save: 'Guardar actual', qs_saved: 'Paleta guardada', qs_applied: 'Configuración aplicada', qs_presets: 'Rápidas', qs_saved_list: 'Guardadas', qs_delete: 'Eliminar', qs_name_required: 'Escribe un nombre', qs_empty: 'No hay paletas guardadas', prev_title: 'Vista previa en vivo', prev_sub: 'Cambia y mira el resultado en tiempo real.', wz_title: 'Configuración inicial', wz_sub: 'Configura tu tienda en unos pasos.', wz_back: 'Atrás', wz_next: 'Siguiente', wz_finish: 'Finalizar', sv_title: 'Vista de la tienda', sv_live: 'En vivo', tut_skip: 'Saltar tutorial', tut_restart: 'Tutorial', tut_done: '¡Tutorial completado!', help_ok: 'Entendido', help_btn: 'Ayuda', hl_subir_t: 'Cómo subir un producto', hl_subir_x: '<p>Completa nombre, precio y categoría. Opcional: subcategoría, imágenes, variantes (tallas o colores) y stock.</p><ul><li>Cada variante pide su propio stock.</li><li>Puedes fijar precio y stock de varias variantes a la vez con el bloque de edición en grupo.</li><li>Termina con Guardar producto.</li></ul>', hl_productos_t: 'Gestionar productos', hl_productos_x: '<p>Aquí ves todo lo que has subido, con buscador y filtro por categoría.</p><ul><li>Alterna entre vista de tarjetas y lista en la barra superior.</li><li>Edita con el lápiz o borra con el tache rojo.</li><li>El interruptor oculta o muestra el producto en la tienda sin borrarlo.</li></ul>', hl_categorias_t: 'Categorías y subcategorías', hl_categorias_x: '<p>Organiza tu catálogo en niveles y personaliza cómo se ve en la tienda.</p><ul><li>Nueva categoría: sección principal (ej. Anillos).</li><li>Nueva subcategoría: detalle dentro de una categoría (ej. Casamiento).</li><li>Barra de navegación: elige ícono, color e imagen de presentación.</li></ul>', hl_plantillas_t: 'Plantillas de tallas', hl_plantillas_x: '<p>Para productos sin variantes, define aquí las tallas disponibles (S, M, L, ...).</p><ul><li>Escribe un nombre de plantilla y una talla por línea.</li><li>Nueva crea la plantilla y Vista las lista.</li><li>La plantilla por defecto se aplica a los productos sin variantes.</li></ul>', hl_contenido_t: 'Contenido y mensaje de WhatsApp', hl_contenido_x: '<p>Configura los textos que ven tus clientes.</p><ul><li>Mensaje de WhatsApp: plantilla del mensaje al confirmar la compra.</li><li>Los botones insertan variables automáticamente (cliente, productos, total...).</li><li>Logo de la marca: se muestra en la tienda.</li></ul>', wz_s1_t: 'Tu tienda', wz_s1_sub: 'Nombre, WhatsApp y moneda.', wz_s2_t: 'Colores', wz_s2_sub: 'Elige un estilo para tu tienda.', wz_s3_t: 'Logo y marca', wz_s3_sub: 'Sube tu logo y ajusta el nombre.', wz_s4_t: 'Métodos de pago', wz_s4_sub: 'Cómo recibe los pagos de tus clientes.', wz_pal1: 'Clásico', wz_pal2: 'Oscuro elegante', wz_pal3: 'Minimal blanco', wz_done: 'Tienda configurada',
         tut_s0_t: 'Bienvenido a tu panel', tut_s0_x: 'Vamos a crear tu catálogo en 4 pasos: tu primera categoría, una subcategoría y tu primer producto.', tut_s1_t: '1. Crea tu categoría', tut_s1_x: 'Ve a la pestaña Nueva categoría, escribe el nombre (ej. Anillos) y pulsa Guardar categoría.', tut_s2_t: '2. Agrega subcategorías', tut_s2_x: 'En Nueva subcategoría elige tu categoría y añade un nombre (ej. Casamiento). Repítelo cuantas veces quieras.', tut_s3_t: '3. Sube tu primer producto', tut_s3_x: 'En Subir producto escribe nombre, precio y elige tu categoría y subcategoría. Opcional: fotos, variantes y stock. Pulsa Guardar producto.', tut_s4_t: '¡Listo!', tut_s4_x: 'Ya sabes armar tu catálogo. Ve a Apariencia > Colores para ver la vista previa de tu tienda en vivo. Puedes repetir este tutorial cuando quieras con el botón de ayuda (?) arriba.', nav_app_heading: 'Apariencia', nav_tienda: 'General', nav_store_heading: 'Tienda', nav_contenido: 'Contenido', nav_cat_heading: 'Catálogo', nav_subir: 'Subir producto', nav_productos: 'Productos', nav_categorias: 'Categorías', nav_plantillas: 'Plantillas de tallas',
@@ -866,7 +879,8 @@
         edit: 'Editar', new_store_ph: 'Nombre de la nueva tienda', no_stores: 'Sin tiendas', empty_cat: 'No hay categorías.', empty_prod: 'No hay productos.', empty_tpl: 'No hay plantillas.', empty_ord: 'No hay pedidos aún.', es_cta_cat: 'Crear primera categoría', es_cta_prod: 'Subir primer producto', es_cta_ord: 'Refrescar pedidos'
       },
       en: {
-        login_sub: 'Admin panel', login_btn: 'Enter', login_user_ph: 'User', login_pass_ph: 'Password', login_error: 'Wrong credentials or access denied', login_hint: 'Your access is managed in the central panel. If the store is not active, access is blocked.',
+        login_sub: 'Admin panel', login_btn: 'Enter', login_user_ph: 'User', login_pass_ph: 'Password', login_error: 'Wrong credentials or access denied', login_hint: 'Your access is managed in the central panel. If the store is not active, access is blocked.', login_reg_toggle: 'No access? Activate your store with a code',
+        reg_sub: 'Use the code generated from your central panel (Stores > Activation code).', reg_code_ph: 'Code XXXX-XXXX', reg_user_ph: 'User', reg_pass_ph: 'Password', reg_pass2_ph: 'Confirm password', reg_btn: 'Create account', reg_back: 'I already have access', reg_min: 'Password must be at least 4 characters', reg_match: 'Passwords do not match', reg_r_invalid: 'Code not valid for this store', reg_r_disabled: 'Code disabled', reg_r_expired: 'Code expired', reg_r_used: 'Code already used', reg_r_userpass: 'Invalid user or password', reg_error: 'Could not activate account',
         ws_plan: 'WhatShop', ws_new: '+ New store',
         nav_apariencia: 'Appearance', nav_ap_colores: 'Colors', nav_ap_tipografia: 'Typography', nav_ap_marca: 'Branding', nav_ap_disenno: 'Design', nav_qs: 'Quick settings', wz_open: 'Initial setup', qs_title: 'Quick settings', qs_sub: 'Color palettes in one click. Applies to the Colors tab.', qs_save: 'Save current', qs_saved: 'Palette saved', qs_applied: 'Configuration applied', qs_presets: 'Quick', qs_saved_list: 'Saved', qs_delete: 'Delete', qs_name_required: 'Type a name', qs_empty: 'No saved palettes', prev_title: 'Live preview', prev_sub: 'Change and see the result in real time.', wz_title: 'Initial setup', wz_sub: 'Set up your store in a few steps.', wz_back: 'Back', wz_next: 'Next', wz_finish: 'Finish', sv_title: 'Store preview', sv_live: 'Live', tut_skip: 'Skip tutorial', tut_restart: 'Tutorial', tut_done: 'Tutorial completed!', help_ok: 'Got it', help_btn: 'Help', hl_subir_t: 'How to upload a product', hl_subir_x: '<p>Fill in name, price and category. Optional: subcategory, images, variants (sizes or colors) and stock.</p><ul><li>Each variant needs its own stock.</li><li>Set price and stock for many variants at once with the bulk edit bar.</li><li>Finish with Save product.</li></ul>', hl_productos_t: 'Manage products', hl_productos_x: '<p>Here you see everything you uploaded, with search and category filter.</p><ul><li>Switch between card and list views in the top bar.</li><li>Edit with the pencil or delete with the red cross.</li><li>The switch hides or shows the product in the store without deleting it.</li></ul>', hl_categorias_t: 'Categories and subcategories', hl_categorias_x: '<p>Organize your catalog and customize how it looks in the store.</p><ul><li>New category: main section (e.g. Rings).</li><li>New subcategory: detail inside a category (e.g. Wedding).</li><li>Nav bar: pick the icon, color and cover image.</li></ul>', hl_plantillas_t: 'Size templates', hl_plantillas_x: '<p>For products without variants, define the available sizes here (S, M, L, ...).</p><ul><li>Type a template name and one size per line.</li><li>New creates the template and View lists them.</li><li>The default template applies to products without variants.</li></ul>', hl_contenido_t: 'Content and WhatsApp message', hl_contenido_x: '<p>Set the texts your customers see.</p><ul><li>WhatsApp message: template of the message when confirming the purchase.</li><li>The buttons insert variables automatically (customer, items, total...).</li><li>Store logo: shown across the store.</li></ul>', wz_s1_t: 'Your store', wz_s1_sub: 'Name, WhatsApp and currency.', wz_s2_t: 'Colors', wz_s2_sub: 'Pick a style for your store.', wz_s3_t: 'Logo & brand', wz_s3_sub: 'Upload your logo and adjust the name.', wz_s4_t: 'Payment methods', wz_s4_sub: 'How your customers pay.', wz_pal1: 'Classic', wz_pal2: 'Elegant dark', wz_pal3: 'Minimal white', wz_done: 'Store configured',
         tut_s0_t: 'Welcome to your panel', tut_s0_x: 'Let\'s build your catalog in 4 steps: your first category, a subcategory and your first product.', tut_s1_t: '1. Create your category', tut_s1_x: 'Open the New category tab, type the name (e.g. Rings) and press Save category.', tut_s2_t: '2. Add subcategories', tut_s2_x: 'In New subcategory pick your category and add a name (e.g. Wedding). Repeat as many times as you want.', tut_s3_t: '3. Upload your first product', tut_s3_x: 'In Upload product type the name, price and pick your category and subcategory. Optional: photos, variants and stock. Press Save product.', tut_s4_t: 'Done!', tut_s4_x: 'You now know how to build your catalog. Go to Appearance > Colors to watch your store preview live. Replay this tutorial anytime with the help (?) button above.', nav_app_heading: 'Appearance', nav_tienda: 'General', nav_store_heading: 'Store', nav_contenido: 'Content', nav_cat_heading: 'Catalog', nav_subir: 'Upload product', nav_productos: 'Products', nav_categorias: 'Categories', nav_plantillas: 'Size templates',
@@ -991,6 +1005,69 @@
     document.getElementById('login-user').placeholder = t('login_user_ph');
     document.getElementById('login-pass').placeholder = t('login_pass_ph');
     document.getElementById('login-hint').textContent = t('login_hint');
+    document.getElementById('reg-code').placeholder = t('reg_code_ph');
+    document.getElementById('reg-user').placeholder = t('reg_user_ph');
+    document.getElementById('reg-pass').placeholder = t('reg_pass_ph');
+    document.getElementById('reg-pass2').placeholder = t('reg_pass2_ph');
+
+    function showRegisterView(on) {
+      document.getElementById('register-view').hidden = !on;
+      document.getElementById('login-user').style.display = on ? 'none' : '';
+      document.getElementById('login-pass').style.display = on ? 'none' : '';
+      document.getElementById('login-btn').style.display = on ? 'none' : '';
+      document.getElementById('login-reg-toggle').style.display = on ? 'none' : '';
+      document.getElementById('login-hint').style.display = on ? 'none' : '';
+      var err = document.getElementById('reg-error');
+      err.style.display = 'none';
+      if (on) document.getElementById('reg-code').focus();
+      else document.getElementById('login-user').focus();
+    }
+    document.getElementById('login-reg-toggle').addEventListener('click', function (e) { e.preventDefault(); showRegisterView(true); });
+    document.getElementById('reg-back').addEventListener('click', function (e) { e.preventDefault(); showRegisterView(false); });
+
+    function doRegister() {
+      var code = (document.getElementById('reg-code').value || '').trim().toUpperCase();
+      var user = (document.getElementById('reg-user').value || '').trim();
+      var pass = document.getElementById('reg-pass').value;
+      var pass2 = document.getElementById('reg-pass2').value;
+      var errEl = document.getElementById('reg-error');
+      if (!code || !user || !pass || !pass2) { errEl.textContent = t('reg_error'); errEl.style.display = 'block'; return; }
+      if (pass.length < 4) { errEl.textContent = t('reg_min'); errEl.style.display = 'block'; return; }
+      if (pass !== pass2) { errEl.textContent = t('reg_match'); errEl.style.display = 'block'; return; }
+      var wst = window.OX1_WSTORE;
+      if (!wst || !wst.centralUrl || !wst.centralKey || wst.wsRef == null) { errEl.textContent = t('reg_error'); errEl.style.display = 'block'; return; }
+      errEl.style.display = 'none';
+      hashPin(pass).then(function (hash) {
+        return fetch(wst.centralUrl + '/rest/v1/rpc/store_redeem_code', {
+          method: 'POST',
+          headers: {
+            'apikey': wst.centralKey,
+            'Authorization': 'Bearer ' + wst.centralKey,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            p_code: code,
+            p_user: user,
+            p_pass_hash: hash,
+            p_ws_ref: wst.wsRef,
+            p_ws_store_id: wst.wsStoreId
+          })
+        });
+      }).then(function (r) { return r.json(); }).then(function (j) {
+        if (j && j.ok === true) {
+          sessionStorage.setItem('whatshop_admin', '1');
+          showPanel();
+        } else {
+          var map = { invalid: 'reg_r_invalid', disabled: 'reg_r_disabled', expired: 'reg_r_expired', used: 'reg_r_used', invalid_user: 'reg_r_userpass', invalid_pass: 'reg_r_userpass' };
+          errEl.textContent = (j && j.reason && map[j.reason]) ? t(map[j.reason]) : t('reg_error');
+          errEl.style.display = 'block';
+        }
+      }).catch(function () { errEl.textContent = t('reg_error'); errEl.style.display = 'block'; });
+    }
+    document.getElementById('reg-btn').addEventListener('click', doRegister);
+    ['reg-code', 'reg-user', 'reg-pass', 'reg-pass2'].forEach(function (id) {
+      document.getElementById(id).addEventListener('keydown', function (e) { if (e.key === 'Enter') doRegister(); });
+    });
 
     function showPanel() {
       document.getElementById('login-view').classList.add('hidden');
@@ -2372,7 +2449,7 @@ _editingProduct = null;
             '<div class="info"><div class="title">' + o.name + ' · <span class="status-badge ' + (o.status || 'en_proceso') + '">' + stLabel(o.status) + '</span></div>' +
             '<div class="sub">' + new Date(o.created_at).toLocaleString() + ' · ' + t('ti_pay') + ': ' + (o.payment_method || '') + ' · ' + formatPrice(o.total, _settings) + '</div></div>' +
             '<div class="actions">' +
-              '<button class="btn ghost small" data-toggle-order="' + o.id + '">' + (o._open ? '^'' : '+') + '</button>' +
+              '<button class="btn ghost small" data-toggle-order="' + o.id + '">' + (o._open ? '^' : '+') + '</button>' +
               '<button class="btn ghost small" data-wa="' + waHref + '">' + t('ped_wa') + '</button>' +
               '<button class="btn ghost small" data-status="pagado" data-order="' + o.id + '">' + t('ped_pagado') + '</button>' +
               '<button class="btn ghost small" data-status="entregado" data-order="' + o.id + '">' + t('ped_entregado') + '</button>' +
@@ -2395,7 +2472,7 @@ _editingProduct = null;
             var id = b.getAttribute('data-toggle-order');
             var row = b.closest('.list-row').querySelector('.order-body');
             row.classList.toggle('open');
-            b.textContent = row.classList.contains('open') ? '^'' : '+';
+            b.textContent = row.classList.contains('open') ? '^' : '+';
           });
         });
       });

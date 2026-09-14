@@ -83,6 +83,14 @@ input, select, textarea { font-family: inherit; }
 .login-btn:hover { opacity: .9; }
 .login-error { color: var(--color-destructive, #dc2626); font-size: .85rem; margin-top: 10px; display: none; }
 .login-hint { color: var(--muted-2); font-size: .78rem; margin-top: 14px; }
+.login-reg-toggle {
+  width: 100%; margin-top: 16px; padding: 6px 0; border: none; background: none;
+  color: var(--primary); font-size: .82rem; cursor: pointer; text-decoration: underline dotted;
+  text-underline-offset: 3px; opacity: .85;
+}
+.login-reg-toggle:hover { opacity: 1; }
+.login-reg { margin-top: 10px; }
+.login-reg .sub { margin-bottom: 16px; }
 
 /* ================= SHELL ================= */
 .shell { display: flex; min-height: 100vh; }
