@@ -1,0 +1,54 @@
+/* ============================================================
+   OX WhatShop - Design tokens
+   Estos tokens se sobreescriben con la configuracion del dueno
+   (panel admin -> Apariencia). NUNCA hardcodear colores en
+   otros archivos CSS: usar siempre las variables de aqui.
+   ============================================================ */
+
+:root {
+  --color-primary: #171717;
+  --color-on-primary: #ffffff;
+  --color-secondary: #404040;
+  --color-accent: #a16207;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+  --color-muted: #e8ecf0;
+  --color-border: #e5e5e5;
+  --color-destructive: #dc2626;
+  --color-ring: #171717;
+  --color-category-box: #e8ecf0;
+  --color-success: #16a34a;
+  --color-warning: #f59e0b;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.14);
+
+  --ease: 200ms ease;
+  --transition: all var(--ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

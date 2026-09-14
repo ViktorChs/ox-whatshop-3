@@ -1,0 +1,22 @@
+{
+  "name": "OX WhatShop",
+  "short_name": "WhatShop",
+  "description": "Tienda e-commerce sin registro con checkout por WhatsApp",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#171717",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "./assets/logos/logoB.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./assets/logos/logoW.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

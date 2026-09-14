@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto - WhatShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/theme.css?v=37" />
+  <link rel="stylesheet" href="./css/legal.css?v=37" />
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .contact-card {
+      background: var(--card, #F7F7F7);
+      border: 1px solid var(--border, #E5E5E5);
+      border-radius: 14px;
+      padding: 24px;
+    }
+    .contact-card h2 {
+      font-family: var(--font-heading, sans-serif);
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-card h2 .badge {
+      background: #16A34A;
+      color: #fff;
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .contact-card p { color: #333; margin-bottom: 8px; }
+    .contact-card a.wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 12px;
+      min-height: 48px;
+    }
+    .contact-card a.wa:hover { filter: brightness(0.95); }
+    @media (max-width: 600px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="legal-page">
+  <nav class="legal-nav">
+    <div class="legal-nav-inner">
+      <a class="brand" href="./">
+        <img src="./assets/logos/logoB.png" alt="Logo WhatShop" />
+        <span><span class="what">What</span><span class="shop">Shop</span></span>
+      </a>
+      <a class="back" href="./tienda.html?view=explore">&larr; Volver a la tienda</a>
+    </div>
+  </nav>
+
+  <main class="legal-wrap">
+    <h1>Contacto</h1>
+    <p class="updated">¿Necesitas ayuda o quieres tener tu propia tienda?</p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h2>Contacto de la tienda <span class="badge">Ventas</span></h2>
+        <p>Para consultas sobre productos, pedidos, envíos y pagos de esta tienda, contacta directamente al vendedor.</p>
+        <a class="wa" href="https://wa.me/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.25-.1-.45-.15-.65.15-.2.3-.75.95-.9 1.15-.15.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.5-.9-.8-1.5-1.8-1.65-2.1-.15-.3-.02-.45.15-.6.15-.15.3-.35.45-.55.15-.2.2-.35.3-.55.1-.2.05-.4-.02-.55-.08-.15-.65-1.6-.9-2.2-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.07-.75.35-.25.3-1 .95-1 2.35s1 2.7 1.15 2.9c.15.2 1.95 3 4.75 4.2.65.3 1.15.45 1.55.6.65.2 1.25.17 1.7.1.5-.07 1.7-.7 1.95-1.35.25-.65.25-1.2.17-1.35-.07-.1-.25-.2-.5-.3ZM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.3l-.35-.2-3.55.93.95-3.45-.23-.37a9.4 9.4 0 0 1-1.44-5 9.42 9.42 0 0 1 9.43-9.43 9.36 9.36 0 0 1 6.65 2.76 9.36 9.36 0 0 1 2.77 6.66c0 5.2-4.24 9.4-9.42 9.4Zm8.3-17.7A11.3 11.3 0 0 0 12.04 0C5.5 0 .15 5.35.15 11.9c0 2.1.55 4.1 1.6 5.9L.03 24l6.35-1.65a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.9-5.35 11.9-11.9 0-3.2-1.25-6.2-3.5-8.5Z"/></svg>
+          Escribir al vendedor
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <h2>Contacto WhatShop <span class="badge">Servicio</span></h2>
+        <p><strong>¿Quieres crear tu propia tienda online como esta?</strong> Esta página fue creada con la plataforma <strong>WhatShop</strong> de <strong>OX1</strong>.</p>
+        <p>Para solicitar el servicio de creación de páginas de tienda WhatShop, soporte o información, contacta al equipo de OX1.</p>
+        <a class="wa" href="https://wa.me/" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.25-.1-.45-.15-.65.15-.2.3-.75.95-.9 1.15-.15.2-.35.2-.65.05-.3-.15-1.25-.45-2.4-1.5-.9-.8-1.5-1.8-1.65-2.1-.15-.3-.02-.45.15-.6.15-.15.3-.35.45-.55.15-.2.2-.35.3-.55.1-.2.05-.4-.02-.55-.08-.15-.65-1.6-.9-2.2-.25-.55-.5-.5-.65-.5h-.55c-.2 0-.5.07-.75.35-.25.3-1 .95-1 2.35s1 2.7 1.15 2.9c.15.2 1.95 3 4.75 4.2.65.3 1.15.45 1.55.6.65.2 1.25.17 1.7.1.5-.07 1.7-.7 1.95-1.35.25-.65.25-1.2.17-1.35-.07-.1-.25-.2-.5-.3ZM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.3l-.35-.2-3.55.93.95-3.45-.23-.37a9.4 9.4 0 0 1-1.44-5 9.42 9.42 0 0 1 9.43-9.43 9.36 9.36 0 0 1 6.65 2.76 9.36 9.36 0 0 1 2.77 6.66c0 5.2-4.24 9.4-9.42 9.4Zm8.3-17.7A11.3 11.3 0 0 0 12.04 0C5.5 0 .15 5.35.15 11.9c0 2.1.55 4.1 1.6 5.9L.03 24l6.35-1.65a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.9-5.35 11.9-11.9 0-3.2-1.25-6.2-3.5-8.5Z"/></svg>
+          Pedir servicio WhatShop
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="legal-footer">
+    <p>&copy; 2026 OX1 · WhatShop. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gracias - WhatShop</title>
+  <meta name="theme-color" content="#FFFFFF" />
+  <link rel="icon" type="image/png" href="./assets/logos/logoB.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/theme.css?v=37" />
+  <link rel="stylesheet" href="./css/tienda.css?v=78" />
+  <style>
+    .thanks-wrap { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+    .thanks-icon { width: 72px; height: 72px; border-radius: 50%; background: var(--color-success, #16a34a); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 2.2rem; margin-bottom: 20px; }
+    .thanks-wrap h1 { font-size: 1.8rem; margin: 0 0 8px; font-family: var(--font-heading); }
+    .thanks-wrap p { color: var(--secondary-text); margin: 0 0 24px; max-width: 420px; }
+    .thanks-wrap .btn-go-store { margin-top: 4px; }
+  </style>
+</head>
+<body class="shop-page">
+  <div class="thanks-wrap">
+    <div class="thanks-icon">&#10003;</div>
+    <h1 data-i18n="thanks_title">¡Gracias por tu pedido!</h1>
+    <p data-i18n="thanks_sub">Hemos recibido tu pedido y te contactaremos por WhatsApp para confirmarlo.</p>
+    <button class="btn-go-store" onclick="window.location.href='./tienda.html?view=explore'" data-i18n="thanks_btn">Volver a la tienda</button>
+  </div>
+
+  <script src="./config.js?v=38"></script>
+  <script>
+    var I18N = {
+      es: { thanks_title: '¡Gracias por tu pedido!', thanks_sub: 'Hemos recibido tu pedido y te contactaremos por WhatsApp para confirmarlo.', thanks_btn: 'Volver a la tienda' },
+      en: { thanks_title: 'Thank you for your order!', thanks_sub: 'We received your order and will contact you by WhatsApp to confirm it.', thanks_btn: 'Back to store' }
+    };
+    var lang = localStorage.getItem('whatshop_lang') === 'en' ? 'en' : 'es';
+    function t(k) { var v = I18N[lang][k]; return v != null ? v : k; }
+    document.querySelectorAll('[data-i18n]').forEach(function (el) { el.textContent = t(el.getAttribute('data-i18n')); });
+  </script>
+</body>
+</html>
